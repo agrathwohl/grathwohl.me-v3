@@ -1,0 +1,38 @@
+{
+  "featured": [
+    {
+      "owner": "SacredData",
+      "repo": "inboxcast",
+      "description": "Turn your inbox into a personalized podcast with AI-powered audio summaries",
+      "homepage": "https://inbox.audio"
+    },
+    {
+      "owner": "agrathwohl",
+      "repo": "t140llm",
+      "description": "Deliver streaming LLM text over a T.140 RTP payload",
+      "homepage": "https://agrathwohl.github.io/t140llm/"
+    }
+  ],
+  "organizations": [
+    {
+      "name": "SacredData",
+      "url": "https://github.com/SacredData",
+      "homepage": "https://sacreddata.io"
+    }
+  ],
+  "additionalRepos": [
+    {
+      "owner": "littlstar",
+      "repo": "js-psvr-encoder",
+      "description": "A simple command line tool to encode your 180 and 360 videos for sideloading with Littlstar's VR Cinema app for PSVR",
+      "homepage": "https://littlstar.github.io/js-psvr-encoder/"
+    },
+    {
+      "owner": "agrathwohl",
+      "repo": "little-media-box",
+      "description": "Convenient atomicized classes for representing digital multimedia assets in distributed Node.js DSP pipelines",
+      "homepage": null
+    }
+  ]
+}
+

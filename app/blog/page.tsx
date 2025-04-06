@@ -1,43 +1,11 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import Header from "@/components/header";
-import { getPostData } from "@/lib/posts";
+import { getSortedPosts } from "@/lib/posts";
 
 export default async function BlogPage() {
-  const posts = [
-    {
-      slug: "tyrannical-illiteracy-pt1",
-      title: "Tyrannical Illiteracy",
-      date: "2017-12-10",
-      description: "How Tactile Interfaces Encouraged our Digital Tribalism",
-      tags: ["oppression", "technology", "media"],
-      postData: await getPostData("tyrannical-illiteracy-pt1"),
-    },
-    {
-      slug: "music-revenues",
-      title: "Music Revenues",
-      date: "2020-09-21",
-      description: "The Solution Is Self-Ownership & Courage",
-      tags: ["music", "business"],
-      postData: await getPostData("music-revenues"),
-    },
-    {
-      slug: "censorship",
-      title: "Big Tech Censorship Is Net Neutrality 2.0",
-      date: "2021-02-25",
-      description: "The power to oppress, track, and shape opinions",
-      tags: ["internet"],
-      postData: await getPostData("censorship"),
-    },
-    {
-      slug: "distributed-media",
-      title: "Distributed Media",
-      date: "2019-11-04",
-      description: "Fire: The Ultimate First-Mover Advantage",
-      tags: ["media", "technology"],
-      postData: await getPostData("distributed-media"),
-    },
-  ];
+  // Get posts sorted by date (newest first)
+  const posts = await getSortedPosts();
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
@@ -71,19 +39,27 @@ export default async function BlogPage() {
                 <h2 className="text-2xl font-bold group-hover:text-red-500 transition-colors">
                   {post.title}
                 </h2>
-                <span className="text-white/50 text-sm">{post.date}</span>
+                <span className="text-white/50 text-sm">
+                  {new Date(post.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })}
+                </span>
               </div>
               <p className="text-white/70 mb-4">{post.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs px-2 py-1 bg-white/10 text-white/70 rounded"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              {post.tags && post.tags.length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  {post.tags.map((tag: string) => (
+                    <span
+                      key={tag}
+                      className="text-xs px-2 py-1 bg-white/10 text-white/70 rounded"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
             </Link>
           ))}
         </div>

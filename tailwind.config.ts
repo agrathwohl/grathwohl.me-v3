@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import typography from '@tailwindcss/typography'
 
 const config = {
   darkMode: ["class"],
@@ -58,6 +59,86 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '100%',
+            color: 'hsl(var(--foreground))',
+            a: {
+              color: 'hsl(var(--primary))',
+              '&:hover': {
+                color: 'hsl(var(--primary))',
+              },
+            },
+            h1: {
+              color: 'hsl(var(--foreground))',
+              fontWeight: '800',
+            },
+            h2: {
+              color: '#f56565',
+              fontWeight: '700',
+            },
+            h3: {
+              color: '#f56565',
+              fontWeight: '600',
+            },
+            h4: {
+              color: 'hsl(var(--foreground))',
+            },
+            blockquote: {
+              color: '#a0aec0',
+              borderColor: '#4a5568',
+            },
+            code: {
+              color: 'hsl(var(--foreground))',
+              backgroundColor: '#2d3748',
+              padding: '0.2rem 0.4rem',
+              borderRadius: '0.25rem',
+              fontWeight: '400',
+              fontSize: '1rem',
+            },
+            'code::before': {
+              content: '""',
+            },
+            'code::after': {
+              content: '""',
+            },
+            pre: {
+              backgroundColor: '#1a202c',
+              color: 'hsl(var(--foreground))',
+              borderRadius: '0.375rem',
+            },
+            'pre code': {
+              backgroundColor: 'transparent',
+              padding: '0',
+            },
+            p: {
+              maxWidth: '100%'
+            },
+            li: {
+              maxWidth: '100%'
+            },
+          },
+        },
+        invert: {
+          css: {
+            color: 'hsl(var(--foreground))',
+            a: {
+              color: '#f56565',
+              '&:hover': {
+                color: '#fc8181',
+              },
+            },
+            blockquote: {
+              color: '#a0aec0',
+              borderColor: '#4a5568',
+            },
+            hr: {
+              borderColor: '#4a5568',
+            },
+          },
+        },
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -74,7 +155,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), typography],
 } satisfies Config
 
 export default config

@@ -7,7 +7,6 @@ type ProjectCardProps = {
   repoUrl: string
   homepage?: string | null
   technologies: string[]
-  imageUrl?: string
 }
 
 export default function ProjectCard({
@@ -16,7 +15,6 @@ export default function ProjectCard({
   repoUrl,
   homepage,
   technologies,
-  imageUrl,
 }: ProjectCardProps) {
   // Determine the primary and secondary links
   const primaryUrl = homepage || repoUrl
@@ -51,12 +49,6 @@ export default function ProjectCard({
           )}
         </div>
       </div>
-
-      {imageUrl && (
-        <div className="mb-4 aspect-video bg-black/50 overflow-hidden">
-          <img src={imageUrl || "/placeholder.svg"} alt={title} className="w-full h-full object-cover" />
-        </div>
-      )}
 
       <p className="text-white/70 mb-4">{description}</p>
 

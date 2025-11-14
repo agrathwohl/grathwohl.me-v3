@@ -9,10 +9,8 @@ type Project = {
   repoUrl: string
   homepage?: string | null
   technologies: string[]
-  imageUrl?: string
 }
 
-// Update the Assistive LLM project with the provided image URL
 const projects: Project[] = [
   {
     title: "INBOX.AUDIO",
@@ -20,8 +18,6 @@ const projects: Project[] = [
     repoUrl: "https://github.com/SacredData/inboxcast",
     homepage: "https://inbox.audio",
     technologies: ["TypeScript", "Next.js", "AI", "Audio"],
-    imageUrl:
-      "https://sjc.microlink.io/iNY_9GengyJP1ojPuovs3b6R8Cn1GBh20QkL0FOq5FmEi8PnejbP1gZdPtjId6l3hwWF1qYGkA3rmuqi_vMAnw.jpeg",
   },
   {
     title: "Rob Bernstein Comedy",
@@ -29,8 +25,6 @@ const projects: Project[] = [
     repoUrl: "https://github.com/SacredData/robbernsteincomedy.com",
     homepage: "https://robbernsteincomedy.com",
     technologies: ["React", "Gatsby", "CMS", "Entertainment"],
-    imageUrl:
-      "https://sjc.microlink.io/QsA-uqGPWji5ILzZmQdLih_K1SofNGuU0ktuU08itBsXhU1bt4J9Nx2pcQ4eb0hYR8VEsT6RoeOXf78eJAKBHQ.jpeg",
   },
   {
     title: "Nuxt PeerTube",
@@ -38,8 +32,6 @@ const projects: Project[] = [
     repoUrl: "https://github.com/SacredData/nuxt-peertube",
     homepage: null,
     technologies: ["TypeScript", "Vue", "Nuxt", "PeerTube"],
-    imageUrl:
-      "https://sjc.microlink.io/X0sjoYd6-5VXPLFYpGq_AxS71eRrxW-m1NS1LgkbvRMgOwADROBHnVeUQWGPJUFANIu05phQ1faB4yId2_fQ4Q.jpeg",
   },
   {
     title: "Assistive LLM",
@@ -47,8 +39,6 @@ const projects: Project[] = [
     repoUrl: "https://github.com/agrathwohl/assistive-llm",
     homepage: null,
     technologies: ["TypeScript", "Accessibility", "LLM", "AI"],
-    imageUrl:
-      "https://sjc.microlink.io/Ar--hJjOPPkzQ-YBQKG4dT1vcoKJYdiRWYSHoEZVehqWAuWQrXPsJ1fLU7urKTroUhTxzvMyMNCaf-ECnOTsIQ.jpeg",
   },
   {
     title: "Part of the Problem",
@@ -57,8 +47,6 @@ const projects: Project[] = [
     repoUrl: "https://github.com/agrathwohl/potp",
     homepage: null,
     technologies: ["React", "Node.js", "Stripe", "Content Delivery"],
-    imageUrl:
-      "https://sjc.microlink.io/ACJJUrsYAwdRL9o495shR2n5T73lkYgWKmtclxYbi-vPmNCKJr9vhrbX4tw22L0WvaUyCPVRlKxzQnjzroq3ug.jpeg",
   },
   {
     title: "t140llm",
@@ -66,7 +54,27 @@ const projects: Project[] = [
     repoUrl: "https://github.com/agrathwohl/t140llm",
     homepage: "https://agrathwohl.github.io/t140llm/",
     technologies: ["TypeScript", "WebRTC", "LLM", "Accessibility"],
-    imageUrl: "https://github.com/agrathwohl/t140llm/raw/master/logo.gif",
+  },
+  {
+    title: "CARLA MCP Server",
+    description: "Audio engineering copilot using Model Context Protocol with CARLA audio plugin host",
+    repoUrl: "https://github.com/agrathwohl/carla-mcp-server",
+    homepage: null,
+    technologies: ["Python", "MCP", "CARLA", "Audio Engineering"],
+  },
+  {
+    title: "Mediocre",
+    description: "ABC-MIDI notation generator with audio creation capabilities for developing audio/music ML datasets",
+    repoUrl: "https://github.com/agrathwohl/mediocre",
+    homepage: null,
+    technologies: ["Rust", "MIDI", "Audio", "Machine Learning"],
+  },
+  {
+    title: "Legacy Runtime",
+    description: "Oro Computer's legacy runtime environment for experimental computing systems",
+    repoUrl: "https://github.com/oro-computer/legacy-runtime",
+    homepage: null,
+    technologies: ["Rust", "Systems Programming", "Runtime"],
   },
 ]
 
